@@ -22,7 +22,7 @@ const projects = [
     name: "Mock HTTP Server and Reliable Data Transfer Protocol",
     description: "Created a mock HTTP server in Python that supports persistent and non-persistent connections and implemented a reliable data transfer protocol over UDP",
     tech: ["Socket Python Library", "Nginx", "Python"],
-    github: "https://github.com/danielchrenko/music-tagging-project",
+    github: "https://github.com/danielchrenko/network-programming",
   },
   {
     name: "Simple Shell with Ability to Run Multiple C Programs Concurrently",
