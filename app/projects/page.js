@@ -22,14 +22,12 @@ const projects = [
     name: "Mock HTTP Server and Reliable Data Transfer Protocol",
     description: "Created a mock HTTP server in Python that supports persistent and non-persistent connections and implemented a reliable data transfer protocol over UDP",
     tech: ["Socket Python Library", "Nginx", "Python"],
-    link: "#",
     github: "https://github.com/danielchrenko/music-tagging-project",
   },
   {
     name: "Simple Shell with Ability to Run Multiple C Programs Concurrently",
     description: "Trained a multiclass classifier to approximate Spotify's legacy EchoNest scores",
     tech: ["Multithreading", "Unix Proc Folder Parsing", "C"],
-    link: "#",
     github: "https://github.com/danielchrenko/PMan-shell-program",
   },
 
@@ -91,7 +89,7 @@ export default function Projects() {
       <div className="text-center mt-12">
         <Link
           href="/"
-          className="text-blue-400 hover:text-blue-300 transition-colors"
+          className="text-gray-400 hover:text-gray-300 transition-colors"
         >
           &larr; Back to Home
         </Link>
