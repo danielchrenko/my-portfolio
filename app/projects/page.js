@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const projects = [
@@ -11,17 +14,38 @@ const projects = [
   {
     name: "EchoNest Machine Learning Autotagging Method",
     description: "Trained a multiclass classifier to approximate Spotify's legacy EchoNest scores",
-    tech: ["LIbrosa", "Python", "Numpy", "Pandas", "Sci-kit Learn"],
+    tech: ["Librosa", "Python", "Numpy", "Pandas", "Sci-kit Learn"],
     link: "https://github.com/danielchrenko/music-tagging-project/blob/main/auto_tagging_project.pdf",
     github: "https://github.com/danielchrenko/music-tagging-project",
+  },
+  {
+    name: "Mock HTTP Server and Reliable Data Transfer Protocol",
+    description: "Created a mock HTTP server in Python that supports persistent and non-persistent connections and implemented a reliable data transfer protocol over UDP",
+    tech: ["Socket Python Library", "Nginx", "Python"],
+    link: "#",
+    github: "https://github.com/danielchrenko/music-tagging-project",
+  },
+  {
+    name: "Simple Shell with Ability to Run Multiple C Programs Concurrently",
+    description: "Trained a multiclass classifier to approximate Spotify's legacy EchoNest scores",
+    tech: ["Multithreading", "Unix Proc Folder Parsing", "C"],
+    link: "#",
+    github: "https://github.com/danielchrenko/PMan-shell-program",
   },
 
 ];
 
 export default function Projects() {
+
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    setLoaded(true);
+  }, []);
+
   return (
-    <main className="min-h-screen bg-gray-900 text-white py-12 px-6 md:px-12">
-      <h1 className="text-5xl font-extrabold text-center mb-12 animate-pulse">
+    <main className="min-h-screen bg-gray-50 text-black py-12 px-6 md:px-12">
+      <h1 className="text-5xl font-bold text-center mb-12">
         My Projects
       </h1>
 
@@ -29,13 +53,13 @@ export default function Projects() {
         {projects.map((proj) => (
           <div
             key={proj.name}
-            className="relative border border-gray-700 rounded-xl p-6 bg-gray-800 shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-2"
+            className="relative border border-gray-700 rounded-xl p-6 bg-gray-100 shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-2"
           >
-            <h2 className="text-2xl font-bold mb-2 text-yellow-400 hover:text-yellow-300 transition-colors">
+            <h2 className="text-2xl font-bold mb-2 text-gray-800 hover:text-gray-900 transition-colors">
               {proj.name}
             </h2>
-            <p className="mb-2 text-gray-300">{proj.description}</p>
-            <p className="mb-4 text-sm text-gray-400">
+            <p className="mb-2 text-gray-900">{proj.description}</p>
+            <p className="mb-4 text-sm text-gray-700">
               Tech: {proj.tech.join(", ")}
             </p>
             <div className="flex gap-4">
@@ -44,7 +68,7 @@ export default function Projects() {
                   href={proj.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-3 py-1 bg-blue-600 rounded-md hover:bg-blue-500 transition-colors"
+                  className="relative border border-gray-700 rounded-xl px-3 py-1 bg-white rounded-md hover:bg-gray-200 transition-colors"
                 >
                   Live Demo
                 </a>
@@ -54,7 +78,7 @@ export default function Projects() {
                   href={proj.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-3 py-1 bg-gray-700 rounded-md hover:bg-gray-600 transition-colors"
+                  className="relative border border-gray-700 rounded-xl px-3 py-1 text-white bg-gray-800 rounded-md hover:bg-gray-1000 transition-colors"
                 >
                   GitHub
                 </a>
