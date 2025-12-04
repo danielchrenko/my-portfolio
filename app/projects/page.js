@@ -8,7 +8,7 @@ const projects = [
     name: "Portfolio Website",
     description: "A personal website built with Next.js and Tailwind CSS.",
     tech: ["Next.js", "Tailwind CSS", "Vercel"],
-    link: "https://my-portfolio-one-gilt-63.vercel.app/",
+    link: "https://danielchrenko.vercel.app",
     github: "https://github.com/danielchrenko/my-portfolio",
   },
   {
